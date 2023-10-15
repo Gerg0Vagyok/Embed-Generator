@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta property="og:title" content="Your Website Title">
-    <meta property="og:description" content="Description of your website">
-    <meta property="og:image" content="URL to a thumbnail image">
-    <meta property="og:url" content="Your website URL">
+    <title>Discord Embed</title>
 </head>
 <body>
-    <!-- Your website content here -->
+    <script>
+        const lib = require('lib')({ token: process.env.STDLIB_SECRET_TOKEN });
+
+        lib.discord.channels['@0.3.2'].messages.create({
+            "channel_id": `${context.params.event.channel_id}`,
+            "content": "",
+            "tts": false,
+            "embeds": [
+                {
+                    "type": "rich",
+                    "title": `Lol, I can now send embeds!`,
+                    "description": `This is just a link with GitHub for FUN! There is no problem with using it if links are enabled!`,
+                    "color": 0xff0101,
+                    "image": {
+                        "url": `https://media.tenor.com/LBBx29EpLAEAAAAd/sus-among.gif`,
+                        "proxy_url": `https://tenor.com/view/sus-among-us-suspi-gif-25732650`,
+                        "height": 640,
+                        "width": 640
+                    },
+                    "footer": {
+                        "text": `(Yeah, so think you know where this is going!)`,
+                        "icon_url": `https://media.tenor.com/29hpMawSpTwAAAAi/dogeprayge.gif`,
+                        "proxy_icon_url": `https://tenor.com/hu/view/dogeprayge-gif-25738115`
+                    }
+                }
+            ]
+        });
+    </script>
 </body>
 </html>
