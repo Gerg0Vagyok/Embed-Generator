@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Discord Embed</title>
+    <meta property="og:title" content="Lol, I can now send embeds!">
+    <meta property="og:description" content="This is just a Discord embed for fun!, But It cant do much :Skull:">
+    <meta property="og:image" content="https://media.tenor.com/LBBx29EpLAEAAAAd/sus-among.gif">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.youtube.com/watch?v=rTgj1HxmUbg">
 </head>
 <body>
-    <script>
-        const lib = require('lib')({ token: process.env.STDLIB_SECRET_TOKEN });
-
-        lib.discord.channels['@0.3.2'].messages.create({
-            "channel_id": `${context.params.event.channel_id}`,
-            "content": "",
-            "tts": false,
-            "embeds": [
-                {
-                    "type": "rich",
-                    "title": `Lol, I can now send embeds!`,
-                    "description": `This is just a link with GitHub for FUN! There is no problem with using it if links are enabled!`,
-                    "color": 0xff0101,
-                    "image": {
-                        "url": `https://media.tenor.com/LBBx29EpLAEAAAAd/sus-among.gif`,
-                        "proxy_url": `https://tenor.com/view/sus-among-us-suspi-gif-25732650`,
-                        "height": 640,
-                        "width": 640
-                    },
-                    "footer": {
-                        "text": `(Yeah, so think you know where this is going!)`,
-                        "icon_url": `https://media.tenor.com/29hpMawSpTwAAAAi/dogeprayge.gif`,
-                        "proxy_icon_url": `https://tenor.com/hu/view/dogeprayge-gif-25738115`
-                    }
-                }
-            ]
-        });
-    </script>
+    <p>This is just a test embed for Discord.</p>
 </body>
 </html>
